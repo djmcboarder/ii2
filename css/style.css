@@ -181,13 +181,13 @@ p {
     {
         width:100%;
         height:400px;
-        order:3;
+        order:2;
     }
     #overview
     {
         height:auto;
         width:100%;
-        order:2;
+        order:3;
     }
     #js
     {
