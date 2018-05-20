@@ -1,20 +1,22 @@
-body, html
-{
-    height:100%;margin:0;
-    font-family: 'Montserrat', sans-serif;
+body, html {
+    height:100%;
+    margin:0;
+    font-family: 'Montserrat',sans-serif;
     font-size:15px;
- 
 }
+
 body{
     display:flex;
 }
 
 nav{
-    width:15%; display:flex; align-items:center; justify-content:center;
-   background-color:black;
-   opacity:0.85;
+    width:15%;
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    background-color:black;
+    opacity:0.85;
 }
-
 
 ul{ list-style-type: none; 
     padding: 3px 3px 3px 3px;
@@ -48,23 +50,25 @@ a.three{
    background-position:center; 
    }
    
-   #pg1, #pg2, #pg3{
-       
-       height:auto;width:100%;background-color:rgba(244, 241, 239, 0.75);
-        padding: 10px;
-        font-size:17px;
-        display:flex;
-        justify-content:center;
+#pg1, #pg2, #pg3{
+    height:auto;
+    width:100%;
+    background-color:rgba(244, 241, 239, 0.75);
+    padding: 10px;
+    font-size:17px;
+    display:flex;
+    justify-content:center;
    }
-   #pg1a, #pg2a, #pg3a{
-       
-       width:50%;
-       height:100%;
-       text-align:center;
+
+#pg1a, #pg2a, #pg3a{
+    /*width:50%; */
+    width:100%;
+    height:100%;
+    text-align:center;
    }
 
 #overview {
-   width:85%;
+   width:100%;
    background-image:url("../img/colorgirl.jpg");
    display:flex;justify-content:flex-start; align-items:center;
    background-size:cover;
@@ -72,20 +76,19 @@ a.three{
    background-position:center; 
    }
    
-   #here{
-       width:100%;
-       color:white;
+#here{
+   width:100%;
+   color:white;
    }
 
 /* End of Section */
 
 h1 { 
-text-transform: uppercase;
-font-weight: bold; 
-color:black;
-font-size: 45px;
-text-align: center;
-
+   text-transform: uppercase;
+   font-weight: bold; 
+   color:black;
+   font-size: 45px;
+   text-align: center;
 } 
 
 p {
@@ -99,7 +102,7 @@ p {
   /* Resources page */
   
   #resources {
-   width:40%;
+   width:40%; 
    background-image:url("../img/nyc.jpg");
    display:flex;justify-content:flex-start; align-items:center;
    background-size:cover;
@@ -109,13 +112,13 @@ p {
   
   
 #js{
-    width:45%;
+     width: 45%;
     height:100%;
     display:flex;
     flex-wrap:wrap;
 }
 #js > div{
-    width:50%;
+     width:50%;
     height:33%;
     box-sizing:border-box;
     border:solid 2px;
@@ -161,28 +164,69 @@ p {
 }
 
 
-  /* Media query: Leftnav moves to top on small screens*/
-
-/*@media only screen and (max-width: 579px)
-{
-    nav{
-        width:20%;
-    }
-}
-*/
+/* media queries */
 
 @media only screen and (max-width: 579px)
 {
-   body{
+    body{display:flex;
+        flex-direction:column;
+        height:auto;
+    }
+    nav{
+        width:100%;
+        text-align: center;
+        order:1;
+    }
+    #resources, #homepage
+    {
+        width:100%;
+        height:400px;
+        order:3;
+    }
+    #overview
+    {
+        height:auto;
+        width:100%;
+        order:2;
+    }
+    #js
+    {
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-wrap:wrap;
+        order:2;
+    }
+    #js > div
+    {
+        width:50%;
+        height:200px;
+    }
+    
+  /* body, nav, #homepage, #overview, #resources {
        display:flex;
        flex-direction:column;
        text-align:center;
-   }
-   nav{
-       width:100%;
-   }
-   #homepage, #overview, #resources{
        width:100%;
        height:auto;
+       float:none
    }
+   #js > div
+   {
+       width:100%;
+       height:100%;
+   }
+   
+}
+
+   h1, #maintitle{    
+       font-size:30px; 
+       font-family:impact;
+   }*/
+}
+@media only screen and (max-width: 991px) {
+#js {
+max-width: 100%;
+height: auto;
+}
 }
